@@ -4,7 +4,7 @@ import { FaCartArrowDown, FaSearch } from "react-icons/fa";
 export default function Header() {
   return (
     <>
-      <div className="py-4">
+      <nav className="py-4">
         <div className="flex flex-wrap sm:flex-nowrap items-stretch gap-3 sm:gap-2">
           <div className="flex items-center flex-grow bg-gray-100 rounded px-2 py-2 min-w-[250px]">
             <div className="flex items-center px-2 border-r border-gray-300">
@@ -32,7 +32,7 @@ export default function Header() {
             <FaCartArrowDown className="text-[20px]" /> View Cart
           </button>
         </div>
-      </div>
+      </nav>
     </>
   );
 }

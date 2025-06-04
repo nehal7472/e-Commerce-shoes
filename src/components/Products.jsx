@@ -1,3 +1,4 @@
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import ProductCard from "./ProductCard";
 
 export default function Products() {
@@ -105,13 +106,31 @@ export default function Products() {
   ];
 
   return (
-    <div className="space-y-4">
-      <div className="flex items-center justify-between">
-        <h1 className="text-xl font-semibold">“Running Shoes”</h1>
-        <div className="text-sm text-gray-500">288 Results</div>
+    <section className="space-y-4">
+      <div className="flex items-center ">
+        <div className="text-sm text-gray-700 space-x-1">
+          <a href="#" className="hover:underline font-medium underline">
+            Home
+          </a>
+          <span>/</span>
+          <a href="#" className="hover:underline font-medium underline">
+            Search
+          </a>
+          <span>/</span>
+          <span className="font-medium text-gray-900">Running Shoes</span>
+        </div>
       </div>
 
-      <div className="flex justify-end">
+      <div className="flex justify-between items-center ">
+        <div className="flex items-center justify-between">
+          <h1 className="text-md md:text-2xl text-textColor textSpacing">
+            “Running Shoes”
+          </h1>
+          <div className="text-sm text-gray-500 flex">
+            <div className="w-0 md:w-[50px] border-b border-gray-400 "></div>
+            288 Results
+          </div>
+        </div>
         <div className="relative">
           <button className="border px-4 py-2 rounded flex items-center gap-2">
             <span>Sort by</span>
@@ -152,6 +171,31 @@ export default function Products() {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         <ProductCard products={products} />
       </div>
-    </div>
+      <div className="flex flex-col md:flex-row items-center justify-end mt-10 gap-2 md:gap-16">
+        <button className="border border-gray-400 rounded px-5 py-2 text-sm font-medium hover:bg-gray-100">
+          Next Page →
+        </button>
+
+        <div className="flex items-center gap-2 text-sm">
+          <span className="text-gray-700">
+            <input
+              type="text"
+              value="01"
+              className="w-10 text-center border border-gray-300 rounded px-1 py-1 focus:outline-none focus:ring-1 focus:ring-black"
+              readOnly
+            />
+          </span>
+
+          <span className="text-gray-700">of 55</span>
+          <button className="p-2 border border-gray-300 rounded hover:bg-gray-100">
+            <IoIosArrowBack />
+          </button>
+
+          <button className="p-2 border border-gray-300 rounded hover:bg-gray-100">
+            <IoIosArrowForward />
+          </button>
+        </div>
+      </div>
+    </section>
   );
 }

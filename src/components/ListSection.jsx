@@ -1,10 +1,10 @@
 import { FaFilter } from "react-icons/fa";
 import { IoIosArrowUp, IoMdClose } from "react-icons/io";
+import { FaCircle } from "react-icons/fa6";
 
 export default function ListSection() {
   return (
-    <div className="space-y-6 text-sm">
-      {/* Applied Filters */}
+    <section className="space-y-6 text-sm">
       <div className="border-b pb-2">
         <div className="flex items-center gap-2 mb-4 border-b pb-2">
           <FaFilter className="text-md" />
@@ -12,7 +12,7 @@ export default function ListSection() {
         </div>
         <div className="flex items-center justify-between font-medium ">
           <span>Applied Filters</span>
-          <a href="#" className="text-xs text-gray-500 hover:underline">
+          <a href="#" className="text-xs text-gray-500 underline">
             clear all
           </a>
         </div>
@@ -31,8 +31,6 @@ export default function ListSection() {
           </span>
         </div>
       </div>
-
-      {/* Category */}
       <div className="border-b pb-2">
         <div className="font-medium mb-2 flex items-center justify-between">
           Category <IoIosArrowUp className="cursor-pointer" />
@@ -56,8 +54,6 @@ export default function ListSection() {
           </label>
         </div>
       </div>
-
-      {/* Stock Status */}
       <div className="border-b pb-2">
         <div className="font-medium mb-2 flex items-center justify-between">
           Stock Status <IoIosArrowUp className="cursor-pointer" />
@@ -73,8 +69,6 @@ export default function ListSection() {
           </label>
         </div>
       </div>
-
-      {/* Size */}
       <div className="border-b pb-2">
         <div className="font-medium mb-2 flex justify-between items-center">
           Size <IoIosArrowUp className="cursor-pointer" />
@@ -90,23 +84,23 @@ export default function ListSection() {
           ))}
         </div>
       </div>
-
-      {/* Color */}
       <div>
         <div className="font-medium mb-2 flex items-center justify-between">
           Color <IoIosArrowUp className="cursor-pointer" />
         </div>
         <div className="flex flex-wrap gap-2">
-          <span className="w-6 h-6 rounded-full border bg-red-600"></span>
-          <span className="w-6 h-6 rounded-full border bg-green-500"></span>
-          <span className="w-6 h-6 rounded-full border bg-blue-600"></span>
-          <span className="w-6 h-6 rounded-full border bg-fuchsia-500"></span>
-          <span className="w-6 h-6 rounded-full border bg-cyan-400"></span>
-          <span className="w-6 h-6 rounded-full border bg-orange-600"></span>
-          <span className="w-6 h-6 rounded-full border bg-black"></span>
-          <span className="w-6 h-6 rounded-full border bg-gray-500"></span>
+          <FaCircle className="w-6 h-6 cursor-pointer text-red-600" />
+          <FaCircle className="w-6 h-6 cursor-pointer text-blue-600" />
+          <FaCircle className="w-6 h-6 cursor-pointer text-green-600" />
+          <FaCircle className="w-6 h-6 cursor-pointer text-orange-600" />
+          <FaCircle className="w-6 h-6 cursor-pointer text-gray-600" />
+          <FaCircle className="w-6 h-6 cursor-pointer text-purple-600" />
+          <FaCircle className="w-6 h-6 cursor-pointer text-yellow-600" />
+          <FaCircle className="w-6 h-6 cursor-pointer text-green-600" />
+          <FaCircle className="w-6 h-6 cursor-pointer text-blue-600" />
+          <FaCircle className="w-6 h-6 cursor-pointer text-gray-600" />
         </div>
       </div>
-    </div>
+    </section>
   );
 }
