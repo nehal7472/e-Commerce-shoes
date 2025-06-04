@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+}
+@layer components {
+  .btn {
+    @apply border border-gray-300  rounded-md px-3 py-1 transition-all duration-300 hover:bg-gray-600 hover:text-white;
+  }
+}
+
+@layer utilities {
+  .flexCenter {
+    @apply flex items-center justify-center;
+  }
+  .sectionPadding {
+    @apply px-4 md:px-32 lg:px-40;
+  }
+  .textSpacing {
+    @apply tracking-widest
+  }
+}
