@@ -1,5 +1,7 @@
 🥿 ShoeStore — E-commerce Shoe Shop (Static)
-Netlify Link - 
+
+Netlify Link - https://e-commerce-shoe-nehal.netlify.app/
+
 A modern, responsive, static e-commerce website for a shoe store, built with React + Vite and Tailwind CSS. This project showcases a clean product listing interface, filter sidebar, pagination, and responsive design without using JavaScript logic (purely presentational).
 
 ✨ Features
