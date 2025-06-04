@@ -1,12 +1,25 @@
-# React + Vite
+🥿 ShoeStore — E-commerce Shoe Shop (Static)
+Netlify Link - 
+A modern, responsive, static e-commerce website for a shoe store, built with React + Vite and Tailwind CSS. This project showcases a clean product listing interface, filter sidebar, pagination, and responsive design without using JavaScript logic (purely presentational).
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+✨ Features
+Responsive layout for mobile, tablet, and desktop
 
-Currently, two official plugins are available:
+Product listing grid with cards
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Sidebar filters (category, size, color, stock)
 
-## Expanding the ESLint configuration
+Pagination controls (Next page + numbered)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Sorting dropdown UI
+
+Clean and minimal design using Tailwind CSS
+
+Fully static frontend, suitable for integration with any backend
+
+🚀 Tech Stack
+Vite + React
+
+Tailwind CSS for utility-first styling
+
+No additional JavaScript logic or backend
