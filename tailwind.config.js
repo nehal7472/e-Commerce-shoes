@@ -22,9 +22,6 @@ export default {
         darkBgColor: "#1F1F1F",
         darkTextColor: "#F2F2F2",
       },
-      boxShadow: {
-        "3xl": "1.5px 4.5px 8px 4.5px #dddddd",
-      },
     },
   },
   plugins: [],
