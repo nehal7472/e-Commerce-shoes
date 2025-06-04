@@ -19,7 +19,7 @@ export default function Header() {
               placeholder="running shoes"
               className="flex-1 px-2 text-sm bg-transparent focus:outline-none text-textColor"
             />
-            <div className="flex items-center gap-2 border-l border-gray-300 pl-2">
+            <div className="hidden md:flex md:items-center md:gap-2 border-l border-gray-300 pl-2">
               <button className="text-gray-600 hover:text-black text-[22px] md:text-[30px]">
                 <IoClose />
               </button>
