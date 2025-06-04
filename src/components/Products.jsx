@@ -1,7 +1,13 @@
-import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import {
+  IoIosArrowBack,
+  IoIosArrowDown,
+  IoIosArrowForward,
+} from "react-icons/io";
 import ProductCard from "./ProductCard";
+import { useState } from "react";
 
 export default function Products() {
+  const [open, setOpen] = useState(false);
   const products = [
     {
       id: 1,
@@ -131,38 +137,42 @@ export default function Products() {
             288 Results
           </div>
         </div>
-        <div className="relative">
-          <button className="border px-4 py-2 rounded flex items-center gap-2">
+        <div className="relative inline-block text-left">
+          <button
+            onClick={() => setOpen(!open)}
+            className="border px-4 py-2 rounded flex items-center gap-2"
+          >
             <span>Sort by</span>
-            <svg
-              className="w-4 h-4"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M19 9l-7 7-7-7"
-              />
-            </svg>
+            <IoIosArrowDown
+              className={`transform transition-transform duration-200 ${
+                open ? "rotate-180" : ""
+              }`}
+            />
           </button>
-          <div className="absolute right-0 mt-2 w-48 bg-white border shadow z-10">
-            <ul className="text-sm">
-              <li className="px-4 py-2 hover:bg-gray-100">
+
+          <div
+            className={`absolute right-0 mt-2 w-48 bg-white border shadow z-10 transition-all duration-200 origin-top transform ${
+              open
+                ? "scale-y-100 opacity-100"
+                : "scale-y-95 opacity-0 pointer-events-none"
+            }`}
+          >
+            <ul className="text-sm divide-y">
+              <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
                 Alphabetically, A to Z
               </li>
-              <li className="px-4 py-2 hover:bg-gray-100">
+              <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
                 Alphabetically, Z to A
               </li>
-              <li className="px-4 py-2 hover:bg-gray-100">
+              <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
                 Price, Low to High
               </li>
-              <li className="px-4 py-2 hover:bg-gray-100">
+              <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
                 Price, High to Low
               </li>
-              <li className="px-4 py-2 hover:bg-gray-100">Popularity</li>
+              <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                Popularity
+              </li>
             </ul>
           </div>
         </div>
